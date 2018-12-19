@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+    <name>mod_joomactivities_site</name>
+    <author>JoomBoost.com</author>
+    <creationDate>06/26/2018</creationDate>
+    <copyright>Copyright (C) 2013-2018 JoomBoost.com. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>support@joomboost.com</authorEmail>
+    <authorUrl>www.joomboost.com</authorUrl>
+    <version>1.0</version>
+    <description>MOD_JOOMACTIVITIES_SITE_XML_DESCRIPTION</description>
+    <files>
+        <filename module="mod_joomactivities_site">mod_joomactivities_site.php</filename>
+        <filename>helper.php</filename>
+        <filename>LICENSE.txt</filename>
+        <filename>index.html</filename>
+        <folder>tmpl</folder>
+    </files>
+    <languages>
+        <language tag="en-GB">en-GB.mod_joomactivities_site.ini</language>
+        <language tag="en-GB">en-GB.mod_joomactivities_site.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic" addfieldpath="administrator/components/com_joomactivities/models/fields">
+                <field name="list_limit" type="text" default="20" class="inputbox input-small"
+                    label="MOD_JOOMACTIVITIES_SITE_FIELD_LIST_LIMIT_LABEL" description="MOD_JOOMACTIVITIES_SITE_FIELD_LIST_LIMIT_DESC"
+                />
+                <field
+                    name="group_activity" type="list" default=""
+                    label="MOD_JOOMACTIVITIES_SITE_CONFIG_GROUP_ACTIVITY_LABEL" description="MOD_JOOMACTIVITIES_SITE_CONFIG_GROUP_ACTIVITY_DESC"
+                    >
+                        <option value="">JGLOBAL_USE_GLOBAL</option>
+                        <option value="0">MOD_JOOMACTIVITIES_SITE_FIELD_OPTION_PERIOD_0</option>
+                        <option value="1">MOD_JOOMACTIVITIES_SITE_FIELD_OPTION_PERIOD_1</option>
+                        <option value="5">MOD_JOOMACTIVITIES_SITE_FIELD_OPTION_PERIOD_5</option>
+                        <option value="15">MOD_JOOMACTIVITIES_SITE_FIELD_OPTION_PERIOD_15</option>
+                        <option value="30">MOD_JOOMACTIVITIES_SITE_FIELD_OPTION_PERIOD_30</option>
+                        <option value="60">MOD_JOOMACTIVITIES_SITE_FIELD_OPTION_PERIOD_60</option>
+                </field>
+                <field name="date_relative" type="list"
+        			label="MOD_JOOMACTIVITIES_SITE_CONFIG_DATE_RELATIVE_LABEL" description="MOD_JOOMACTIVITIES_SITE_CONFIG_DATE_RELATIVE_DESC">
+        			<option value="">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+        		</field>
+                <field
+                    name="date_format" type="text" size="15"
+                    label="JGLOBAL_DATE_FORMAT_LABEL" description="JGLOBAL_DATE_FORMAT_DESC"
+                />
+                <field name="user_link" type="list" default=""
+                    label="MOD_JOOMACTIVITIES_SITE_CONFIG_USER_LINK_LABEL" description="MOD_JOOMACTIVITIES_SITE_CONFIG_USER_LINK_DESC"
+                    >
+                        <option value="">JGLOBAL_USE_GLOBAL</option>
+                        <option value="nolink">MOD_JOOMACTIVITIES_SITE_FIELD_OPTION_NOLINK</option>
+                        <option value="joomla">MOD_JOOMACTIVITIES_SITE_FIELD_OPTION_JOOMLA</option>
+                        <option value="cb">MOD_JOOMACTIVITIES_SITE_FIELD_OPTION_CB</option>
+                        <option value="jomsocial">MOD_JOOMACTIVITIES_SITE_FIELD_OPTION_JOMSOCIAL</option>
+                        <option value="kunena">MOD_JOOMACTIVITIES_SITE_FIELD_OPTION_KUNENA</option>
+                        <option value="joomproject">MOD_JOOMACTIVITIES_SITE_FIELD_OPTION_JOOMPROJECT</option>
+                </field>
+                <field name="filter_author_id" type="list" default="0"
+                    label="MOD_JOOMACTIVITIES_SITE_FIELD_AUTHORS_LABEL" description="MOD_JOOMACTIVITIES_SITE_FIELD_AUTHORS_DESC">
+                    <option value="0">MOD_JOOMACTIVITIES_SITE_FIELD_VALUE_ANYONE</option>
+                    <option value="by_me">MOD_JOOMACTIVITIES_SITE_FIELD_VALUE_BY_ME</option>
+                    <option value="not_me">MOD_JOOMACTIVITIES_SITE_FIELD_VALUE_NOT_BY_ME</option>
+                </field>
+                <field name="filter_client_id" type="list" default="0"
+                    label="MOD_JOOMACTIVITIES_SITE_FIELD_LOCATION_LABEL" description="MOD_JOOMACTIVITIES_SITE_FIELD_LOCATION_DESC">
+                    <option value="0">JSITE</option>
+                    <option value="1">JADMINISTRATOR</option>
+                </field>
+                <field name="filter_extension" type="uaextension" default=""
+                    label="MOD_JOOMACTIVITIES_SITE_FIELD_EXTENSION_LABEL" description="MOD_JOOMACTIVITIES_SITE_FIELD_EXTENSION_DESC"
+                    multiple="true" size="10"
+                    >
+                        <option value="">JOPTION_ALL_EXTENSIONS</option>
+                </field>
+                <field name="show_filter_search" type="radio" default="1" class="btn-group"
+                    label="MOD_JOOMACTIVITIES_SITE_FIELD_SHOW_FILTER_SEARCH_LABEL" description="MOD_JOOMACTIVITIES_SITE_FIELD_SHOW_FILTER_SEARCH_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="show_filter_extension" type="radio" default="0" class="btn-group"
+                    label="MOD_JOOMACTIVITIES_SITE_FIELD_SHOW_FILTER_EXTENSION_LABEL" description="MOD_JOOMACTIVITIES_SITE_FIELD_SHOW_FILTER_EXTENSION_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="show_filter_event" type="radio" default="0" class="btn-group"
+                    label="MOD_JOOMACTIVITIES_SITE_FIELD_SHOW_FILTER_EVENT_LABEL" description="MOD_JOOMACTIVITIES_SITE_FIELD_SHOW_FILTER_EVENT_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+            </fieldset>
+            <fieldset name="advanced">
+                <field name="layout" type="modulelayout"
+                    label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC"
+                />
+                <field name="moduleclass_sfx" type="text"
+                    label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"
+                />
+                <field name="cache" type="list" default="0"
+                    label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC"
+                >
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+                <field
+                    name="load_jquery" type="radio" default="1" class="btn-group"
+                    label="MOD_JOOMACTIVITIES_SITE_CONFIG_LOAD_JQUERY_LABEL" description="MOD_JOOMACTIVITIES_SITE_CONFIG_LOAD_JQUERY_DESC"
+                    >
+                        <option value="0">JNO</option>
+                        <option value="1">JYES</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

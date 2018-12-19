@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="content" method="upgrade">
+    <name>plg_content_joomactivities</name>
+    <creationDate>02/12/2018</creationDate>
+    <author>JoomBoost</author>
+    <copyright>(C) 2012-2018 JoomBoost. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later</license>
+    <authorEmail>support@joomboost.com</authorEmail>
+    <authorUrl>https://www.joomboost.com</authorUrl>
+    <version>1.0</version>
+    <description>PLG_CONTENT_JOOMACTIVITIES_XML_DESCRIPTION</description>
+    <files>
+        <filename plugin="joomactivities">joomactivities.php</filename>
+        <filename>index.html</filename>
+        <filename>LICENSE.txt</filename>
+        <filename>plugin.php</filename>
+        <folder>helpers</folder>
+    </files>
+    <languages>
+        <language tag="en-GB">en-GB.plg_content_joomactivities.ini</language>
+        <language tag="en-GB">en-GB.plg_content_joomactivities.sys.ini</language>
+    </languages>
+</extension>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="com_joomactivities" basedir="." default="dist" description="Build package file for JoomActivities extension">
+    <target name="dirbuild">
+        <echo msg="Building Folders" />
+        <mkdir dir="./build_${version}/admin" />
+        <mkdir dir="./build_${version}/site" />
+        <mkdir dir="./build_${version}/media" />
+        <mkdir dir="./build_${version}/modules" />
+        <mkdir dir="./build_${version}/modules/mod_joomactivities_site" />
+        <mkdir dir="./build_${version}/plugins" />
+        <mkdir dir="./build_${version}/plugins/joomactivities/content" />
+        <mkdir dir="./build_${version}/plugins/content/joomactivities" />
+        <echo msg="Copying Files" />
+        <echo msg="1 - Copying language files" />
+        <copy file="./language/en-GB/en-GB.com_joomactivities.ini" todir="./build_${version}/site" />
+        <copy file="./language/en-GB/en-GB.com_joomactivities.sys.ini" todir="./build_${version}/site" />
+        <copy file="./administrator/language/en-GB/en-GB.com_joomactivities.ini" todir="./build_${version}/admin" />
+        <copy file="./administrator/language/en-GB/en-GB.com_joomactivities.sys.ini" todir="./build_${version}/admin" />
+        <copy file="./language/en-GB/en-GB.mod_joomactivities_site.ini" todir="./build_${version}/modules/mod_joomactivities_site" />
+        <copy file="./language/en-GB/en-GB.mod_joomactivities_site.sys.ini" todir="./build_${version}/modules/mod_joomactivities_site" />
+        <copy file="./administrator/language/en-GB/en-GB.plg_joomactivities_content.ini" todir="./build_${version}/plugins/joomactivities/content" />
+        <copy file="./administrator/language/en-GB/en-GB.plg_joomactivities_content.sys.ini" todir="./build_${version}/plugins/joomactivities/content" />
+        <copy file="./administrator/language/en-GB/en-GB.plg_content_joomactivities.ini" todir="./build_${version}/plugins/content/joomactivities" />
+        <copy file="./administrator/language/en-GB/en-GB.plg_content_joomactivities.sys.ini" todir="./build_${version}/plugins/content/joomactivities" />
+        <echo msg="2 - Copying admin files" />
+        <copy todir="./build_${version}/admin">
+            <fileset dir="./administrator/components/com_joomactivities">
+                <exclude name="script.php"></exclude>
+                <exclude name="joomactivities.xml"></exclude>
+            </fileset>
+        </copy>
+        <echo msg="3 - Copying site files" />
+        <copy todir="./build_${version}/site">
+            <fileset dir="./components/com_joomactivities">
+            </fileset>
+        </copy>
+        <echo msg="4 - Copying media files" />
+        <copy todir="./build_${version}/media">
+            <fileset dir="./media/com_joomactivities"></fileset>
+        </copy>
+        <echo msg="5 - Copying Modules files" />
+        <copy todir="./build_${version}/modules/mod_joomactivities_site">
+            <fileset dir="./modules/mod_joomactivities_site"></fileset>
+        </copy>
+        <echo msg="6 - Copying Plugins files" />
+        <copy todir="./build_${version}/plugins/joomactivities/content">
+            <fileset dir="./plugins/joomactivities/content"></fileset>
+        </copy>
+        <copy todir="./build_${version}/plugins/content/joomactivities">
+            <fileset dir="./plugins/content/joomactivities"></fileset>
+        </copy>
+        <echo msg="7 - Copying Install and main xml files in root" />
+        <copy file="./administrator/components/com_joomactivities/script.php" todir="./build_${version}" />
+        <copy file="./administrator/components/com_joomactivities/joomactivities.xml" todir="./build_${version}" />
+    </target>
+    <target name="dist" depends="dirbuild">
+        <echo msg="Creating archive..." />
+        <zip destfile="${path}com_joomactivities_v${version}.zip">
+            <fileset dir="./build_${version}"></fileset>
+        </zip>
+        <echo msg="Files copied and compressed in build directory OK!" />
+        <delete dir="./build_${version}" verbose="true" failonerror="true" />
+        <echo msg="Build File removed" />
+    </target>
+</project>

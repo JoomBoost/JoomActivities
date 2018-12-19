@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+    <name>com_joomactivities</name>
+    <author>JoomBoost.com</author>
+    <creationDate>06/06/2018</creationDate>
+    <copyright>(C) 2013-2018 JoomBoost.com. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>support@joomboost.com</authorEmail>
+    <authorUrl>https://www.joomboost.com</authorUrl>
+    <version>1.1</version>
+    <description>COM_JOOMACTIVITIES_XML_DESCRIPTION</description>
+    <scriptfile>script.php</scriptfile>
+    <install folder="admin">
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install/mysql/structure.sql</file>
+            <file driver="mysql" charset="utf8">sql/install/mysql/data.sql</file>
+        </sql>
+    </install>
+    <files folder="site">
+        <folder>helpers</folder>
+        <folder>views</folder>
+        <filename>joomactivities.php</filename>
+        <filename>controller.php</filename>
+        <filename>router.php</filename>
+        <filename>index.html</filename>
+    </files>
+    <languages folder="site">
+        <language tag="en-GB">en-GB.com_joomactivities.ini</language>
+        <language tag="en-GB">en-GB.com_joomactivities.sys.ini</language>
+    </languages>
+    <administration>
+        <files folder="admin">
+            <folder>sql</folder>
+            <folder>controllers</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>joomactivities.php</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+        </files>
+        <languages folder="admin">
+            <language tag="en-GB">en-GB.com_joomactivities.ini</language>
+            <language tag="en-GB">en-GB.com_joomactivities.sys.ini</language>
+        </languages>
+        <menu>com_joomactivities</menu>
+    </administration>
+    <media folder="media" destination="com_joomactivities">
+        <filename>index.html</filename>
+        <folder>js</folder>
+    </media>
+    <modules folder="modules">
+        <module name="mod_joomactivities_site" />
+    </modules>
+    <plugins folder="plugins">
+        <plugin name="joomactivities" group="content" enable="1"/>
+        <plugin name="content" group="joomactivities" enable="1"/>
+    </plugins>
+    <updateservers>
+        <server type="extension" priority="1" name="JoomActivities Update">
+            <![CDATA[https://www.joomboost.com/index.php?option=com_mediastore&task=pluginTask&plugin=joomla&subtask=server&id=163]]>
+        </server>
+    </updateservers>
+</extension>
