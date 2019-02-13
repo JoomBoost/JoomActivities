@@ -145,7 +145,7 @@ class JoomActivitiesHelper
         }
 
         $lang = JFactory::getLanguage();
-        $default_lang = $lang->getDefault();
+        $default_lang = $lang->getTag();
 
         foreach ($plugins AS $plugin)
         {
