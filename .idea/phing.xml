@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhingConfiguration">
+    <buildFilePaths>
+      <buildFile options="" path="file://$PROJECT_DIR$/joomactivities_build.xml">
+        <option name="properties">
+          <list>
+            <property name="version" value="1.1.1" />
+            <property name="path" value="C:\Users\amine\OneDrive\Documents\JoomBoost\Components\JoomActivities\" />
+          </list>
+        </option>
+      </buildFile>
+    </buildFilePaths>
+    <phingPath>$PROJECT_DIR$/../../phing/phing-latest.phar</phingPath>
+  </component>
+</project>
