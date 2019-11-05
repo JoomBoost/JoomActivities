@@ -22,6 +22,12 @@
         />
     </fieldset>
     <fieldset name="frontend" label="COM_JOOMACTIVITIES_CONFIG_FRONTEND_SETTINGS_LABEL" description="COM_JOOMACTIVITIES_CONFIG_FRONTEND_SETTINGS_DESC">
+
+        <field name="bs" type="radio" class="btn-group" default="1"
+               label="COM_JOOMACTIVITIES_CONFIG_LOAD_BS4_LABEL" description="COM_JOOMACTIVITIES_CONFIG_LOAD_BS4_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
         <field name="user_link" type="list" default="joomla"
             label="COM_JOOMACTIVITIES_CONFIG_USER_LINK_LABEL" description="COM_JOOMACTIVITIES_CONFIG_USER_LINK_DESC"
             >

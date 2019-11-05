@@ -1,0 +1,140 @@
+#jb-template .form-control {
+    height: initial;
+}
+
+#jb-template .multiple-select .form-control > select{
+    border: none;
+    width: 100%;
+}
+
+#jb-template .btn-warning, #jb-template .btn-warning:hover{
+    color: white;
+}
+
+#jb-template .close-button{
+    top: 5px;
+    right: 5px;
+    width: 20px;
+    height: 20px;
+    background: white;
+    padding: 0px;
+    line-height: 17px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #e3e3e3;
+}
+
+#jb-template ul.list-group{
+    margin: 0px;
+}
+
+/* Small Devices */
+@media only screen and (max-width: 576px){
+    #jb-template h3{
+        font-size: 1.2rem;
+    }
+
+    #jb-template select .mt-sm-2{
+        margin-top: 0.5rem !important;
+    }
+
+    #jb-template select{
+        font-size: 0.75rem;
+    }
+}
+
+@media only screen and (max-width: 960px){
+    #jb-template .edit-button{
+        bottom: 10px;
+    }
+}
+
+#jb-template .btn-disable:hover{
+    pointer: initial !important;
+}
+
+/* fix modal in some templates */
+#jb-template .modal {
+    margin: initial;
+    width: 100%;
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+#jb-template .overflow-hidden{
+    overflow: hidden;
+}
+#jb-template .chzn-container-multi .chzn-choices,#jb-template .chzn-container-single .chzn-single {
+    padding: 0.375rem 0.75rem;
+    height: initial;
+
+}
+#jb-template.joomrecipe_search .chzn-container.chzn-container-single{
+    width: 77% !important;;
+}
+
+#jb-template input {
+    height: initial;
+}
+
+#jb-template .radio,#jb-template  .checkbox{
+ /*   margin:initial;
+    padding:initial; */
+}
+/*
+#jb-template .card .btn-group{
+    display: initial !important;
+}
+#jb-template .YesNo{
+    display: block !important;
+}*/
+
+#jb-template .fade{
+     opacity:  initial !important;
+}
+#jb-template .nav-item.nav-link{
+    display: block !important;
+}
+/*#jb-template [data-toggle='tooltip']{
+    display:inline-block !important;
+}*/
+#jb-template .btn-group{
+    /* display: block !important; */
+   display: -ms-inline-flexbox !important;
+    display: inline-flex !important;
+}
+#jb-template .btn-secondary {
+    background: #6c757d;
+}
+#jb-template .btn-outline-info:hover {
+    background: #17a2b8;
+}
+#jb-template .btn-outline-secondary:hover {
+    background: #6c757d;
+}
+
+#jb-template .popover .arrow {
+    border-width: inherit;
+}
+#jb-template .collapse {
+    height: inherit;
+}
+#jb-template ul#myTabTabs li a{
+    display: block !important;
+}
+
+#jb-template .container {
+
+    -moz-border-radius: inherit !important;
+    -webkit-border-radius: inherit !important;
+    border-radius: inherit !important;
+    border: inherit !important;
+    -moz-box-shadow:  none !important;;
+    -webkit-box-shadow:  none !important;;
+    box-shadow:  none !important;;
+
+
+}
+
+
+

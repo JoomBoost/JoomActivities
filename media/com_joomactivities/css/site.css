@@ -1,0 +1,9 @@
+#jb-template .list-group.list-group-striped .list-group-item:nth-of-type(odd){
+	background: #f9f9f9;
+}
+#jb-template .list-group.list-group-hover .list-group-item:hover{
+	background: #f5f5f5;
+}
+#jb-template .list-group.list-group-striped .list-group-item:nth-of-type(even){
+
+}
