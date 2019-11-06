@@ -16,6 +16,14 @@
             <file driver="mysql" charset="utf8">sql/install/mysql/data.sql</file>
         </sql>
     </install>
+    <media folder="media" destination="com_joomactivities">
+        <folder>css</folder>
+        <folder>images</folder>
+        <folder>js</folder>
+        <folder>font</folder>
+        <folder>bootstrap</folder>
+        <filename>index.html</filename>
+    </media>
     <files folder="site">
         <folder>helpers</folder>
         <folder>views</folder>
