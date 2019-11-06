@@ -5,8 +5,8 @@
       <buildFile options="" path="file://$PROJECT_DIR$/joomactivities_build.xml">
         <option name="properties">
           <list>
-            <property name="version" value="1.1.1" />
-            <property name="path" value="C:\Users\amine\OneDrive\Documents\JoomBoost\Components\JoomActivities\" />
+            <property name="version" value="1.2.0" />
+            <property name="path" value="C:\Users\amine\OneDrive\Documents\JoomBoost\Components\JoomActivities\Releases\" />
           </list>
         </option>
       </buildFile>
