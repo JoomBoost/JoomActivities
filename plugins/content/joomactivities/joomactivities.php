@@ -59,7 +59,7 @@ class plgContentJoomActivities extends JPlugin
         parent::__construct($subject, $config);
 
         // Get the dispatcher
-        $this->dispatcher = JDispatcher::getInstance();
+        $this->dispatcher = version_compare(JVERSION,'4','lt') ? JDispatcher::getInstance() : \Joomla\CMS\Factory::getApplication();
 
         // Set unsupported contexts
         $this->unsupported = array(

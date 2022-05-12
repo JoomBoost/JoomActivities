@@ -7,7 +7,7 @@
     <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
     <authorEmail>support@joomboost.com</authorEmail>
     <authorUrl>https://www.joomboost.com</authorUrl>
-    <version>1.2.0</version>
+    <version>1.2.1</version>
     <description>COM_JOOMACTIVITIES_XML_DESCRIPTION</description>
     <scriptfile>script.php</scriptfile>
     <install folder="admin">

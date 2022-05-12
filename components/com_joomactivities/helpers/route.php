@@ -17,7 +17,7 @@ defined('_JEXEC') or die();
  */
 abstract class JoomActivitiesHelperRoute
 {
-    public function getActivitiesRoute()
+    public static function getActivitiesRoute()
     {
         static $itemid = null;
 
