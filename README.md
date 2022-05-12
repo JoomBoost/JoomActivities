@@ -1,3 +1,5 @@
+# This extension was discontinued, because was merged with JoomProject component for Joomla 4+
+
 ## What is JoomActivities ?
 JoomActivities component is a modular, extensible tool for logging user activity in Joomla. More specifically, it tracks activity based on events, such as saving, updating and deleting data.
 
